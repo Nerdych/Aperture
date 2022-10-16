@@ -15,6 +15,8 @@
   "author": "Nikita Prodan <sa_vvk@mail.ru>",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "del": "^7.0.0",
+    "gulp": "^4.0.2",
+    "gulp-file-include": "^2.3.0"
   }
 }
