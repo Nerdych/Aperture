@@ -13,6 +13,14 @@ import { plugins } from '../config/plugins.js';
 export function html() {
   return gulp
     .src(folderPath.src.html)
+    .pipe(
+      plugins.plumber(
+        plugins.notify.onError({
+          title: 'HTML',
+          message: 'Error: <%= error.message %>',
+        })
+      )
+    )
     .pipe(fileInclude())
     .pipe(plugins.replace(/@img\//g, 'images/'))
     .pipe(webpHtmlNoSvg())
@@ -29,5 +37,6 @@ export function html() {
         },
       })
     )
-    .pipe(gulp.dest(folderPath.build.html));
+    .pipe(gulp.dest(folderPath.build.html))
+    .pipe(plugins.browsersync.stream());
 }
