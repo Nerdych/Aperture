@@ -1,0 +1,17 @@
+{
+  "name": "aperture",
+  "version": "1.0.0",
+  "description": "Website layout",
+  "main": "gulpfile.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "site",
+    "website",
+    "aperture"
+  ],
+  "author": "Nikita Prodan <sa_vvk@mail.ru>",
+  "license": "ISC"
+}
