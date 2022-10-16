@@ -13,5 +13,8 @@
     "aperture"
   ],
   "author": "Nikita Prodan <sa_vvk@mail.ru>",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
 }
