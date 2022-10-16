@@ -6,16 +6,24 @@ const buildFolder = './dist';
 const srcFolder = './src';
 const __dirname = path.resolve();
 
-console.log(path.resolve(__dirname, 'hello'));
+function replaceBackslash(path) {
+  return path.replaceAll('\\', '/');
+}
 
 export const folderPath = {
   build: {
-    files: path.resolve(__dirname, buildFolder, 'files'),
+    files: replaceBackslash(path.resolve(__dirname, buildFolder, 'files')),
   },
   src: {
-    files: `${srcFolder}/files/**/*.*`,
+    files: replaceBackslash(
+      path.resolve(__dirname, srcFolder, 'files', '**', '*.*')
+    ),
   },
-  watch: {},
+  watch: {
+    files: replaceBackslash(
+      path.resolve(__dirname, srcFolder, 'files', '**', '*.*')
+    ),
+  },
   clean: buildFolder,
   srcFolder: srcFolder,
   rootFolder: rootFolder,
