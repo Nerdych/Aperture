@@ -12,20 +12,20 @@ function replaceBackslash(path) {
 
 export const folderPath = {
   build: {
-    html: replaceBackslash(path.resolve(__dirname, buildFolder)),
-    files: replaceBackslash(path.resolve(__dirname, buildFolder, 'files')),
+    html: replaceBackslash(path.join(__dirname, buildFolder)),
+    files: replaceBackslash(path.join(__dirname, buildFolder, 'files')),
   },
   src: {
     files: replaceBackslash(
-      path.resolve(__dirname, srcFolder, 'files', '**', '*.*')
+      path.join(__dirname, srcFolder, 'files', '**', '*.*')
     ),
-    html: replaceBackslash(path.resolve(__dirname, srcFolder, '*.html')),
+    html: replaceBackslash(path.join(__dirname, srcFolder, '*.html')),
   },
   watch: {
     files: replaceBackslash(
-      path.resolve(__dirname, srcFolder, 'files', '**', '*.*')
+      path.join(__dirname, srcFolder, 'files', '**', '*.*')
     ),
-    html: replaceBackslash(path.resolve(__dirname, srcFolder, '**', '*.html')),
+    html: replaceBackslash(path.join(__dirname, srcFolder, '**', '*.html')),
   },
   clean: buildFolder,
   srcFolder: srcFolder,
