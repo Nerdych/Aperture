@@ -15,6 +15,7 @@ export const folderPath = {
     files: replaceBackslash(path.join(__dirname, buildFolder, 'files')),
     html: replaceBackslash(path.join(__dirname, buildFolder)),
     css: replaceBackslash(path.join(__dirname, buildFolder, 'css')),
+    js: replaceBackslash(path.join(__dirname, buildFolder, 'js')),
   },
   src: {
     files: replaceBackslash(
@@ -22,7 +23,10 @@ export const folderPath = {
     ),
     html: replaceBackslash(path.join(__dirname, srcFolder, '*.html')),
     scss: replaceBackslash(
-      path.join(__dirname, srcFolder, 'assets', 'scss', '*.scss')
+      path.join(__dirname, srcFolder, 'assets', 'styles', 'styles.scss')
+    ),
+    ts: replaceBackslash(
+      path.join(__dirname, srcFolder, 'assets', 'scripts', 'index.ts')
     ),
   },
   watch: {
@@ -31,6 +35,7 @@ export const folderPath = {
     ),
     html: replaceBackslash(path.join(__dirname, srcFolder, '**', '*.html')),
     scss: replaceBackslash(path.join(__dirname, srcFolder, '**', '*.scss')),
+    ts: replaceBackslash(path.join(__dirname, srcFolder, '**', '*.ts')),
   },
   clean: buildFolder,
   srcFolder: srcFolder,
