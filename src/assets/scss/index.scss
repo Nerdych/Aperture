@@ -1,0 +1,9 @@
+@import './components/_header';
+
+$e: green;
+
+body {
+  color: $e;
+
+  background: url('@img/abstract@1x.jpg') 0 0 no-repeat;
+}

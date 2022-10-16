@@ -23,6 +23,8 @@ export function html() {
     )
     .pipe(fileInclude())
     .pipe(plugins.replace(/@img\//g, 'images/'))
+    .pipe(plugins.replace(/@scss\//g, 'css/'))
+    .pipe(plugins.replace(/.scss/g, '.min.css'))
     .pipe(webpHtmlNoSvg())
     .pipe(
       versionNumber({
