@@ -17,6 +17,7 @@ export const folderPath = {
     css: replaceBackslash(path.join(__dirname, buildFolder, 'css')),
     js: replaceBackslash(path.join(__dirname, buildFolder, 'scripts')),
     images: replaceBackslash(path.join(__dirname, buildFolder, 'images')),
+    videos: replaceBackslash(path.join(__dirname, buildFolder, 'videos')),
   },
   src: {
     files: replaceBackslash(
@@ -41,6 +42,9 @@ export const folderPath = {
     ),
     svg: replaceBackslash(
       path.join(__dirname, srcFolder, 'assets', 'images', '**', '*.svg')
+    ),
+    videos: replaceBackslash(
+      path.join(__dirname, srcFolder, 'assets', 'videos', '**', '*.*')
     ),
   },
   watch: {

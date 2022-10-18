@@ -25,8 +25,8 @@ export function html() {
     .pipe(plugins.replace(/@img\//g, 'images/'))
     .pipe(plugins.replace(/@styles\//g, 'css/'))
     .pipe(plugins.replace(/@scripts\//g, 'scripts/'))
+    .pipe(plugins.replace(/@videos\//g, 'videos/'))
     .pipe(plugins.replace(/[.]scss/g, '.min.css'))
-    .pipe(plugins.replace(/[.]ts/g, '.min.js'))
     .pipe(webpHtmlNoSvg())
     .pipe(
       versionNumber({
