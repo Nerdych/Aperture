@@ -30,7 +30,7 @@ export const folderPath = {
       path.join(__dirname, srcFolder, 'assets', 'styles', 'styles.scss')
     ),
     js: replaceBackslash(
-      path.join(__dirname, srcFolder, 'assets', 'scripts', 'index.js')
+      path.join(__dirname, srcFolder, 'assets', 'scripts', '**', '*.js')
     ),
     images: replaceBackslash(
       path.join(
@@ -55,7 +55,7 @@ export const folderPath = {
     ),
     html: replaceBackslash(path.join(__dirname, srcFolder, '**', '*.html')),
     scss: replaceBackslash(path.join(__dirname, srcFolder, '**', '*.scss')),
-    js: replaceBackslash(path.join(__dirname, srcFolder, '**', '*.ts')),
+    js: replaceBackslash(path.join(__dirname, srcFolder, '**', '*.js')),
     images: replaceBackslash(
       path.join(
         __dirname,

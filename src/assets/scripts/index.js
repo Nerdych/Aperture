@@ -1,5 +1,1 @@
-import { helper } from './helper';
-
-// helper();
-
-const a = 12;
+let b = 1;
