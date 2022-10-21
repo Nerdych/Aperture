@@ -4,7 +4,7 @@ import fileInclude from 'gulp-file-include';
 import versionNumber from 'gulp-version-number';
 import htmlmin from 'gulp-htmlmin';
 
-// Pathes
+// Paths
 import { folderPath } from '../config/path.js';
 
 // Plugins

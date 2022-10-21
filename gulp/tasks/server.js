@@ -1,6 +1,8 @@
 // Plugins
-import { folderPath } from '../config/path.js';
 import { plugins } from '../config/plugins.js';
+
+// Paths
+import { folderPath } from '../config/path.js';
 
 export function server() {
   return plugins.browsersync.init({
