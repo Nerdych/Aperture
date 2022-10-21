@@ -53,6 +53,6 @@
     }
   },
   "lint-staged": {
-    "*.(js|scss|html)": ["npm run prettier", "npm run eslint:fix", "git add"],
+    "*.(js|scss|html)": ["npm run prettier", "npm run eslint:fix", "git add"]
   }
 }
