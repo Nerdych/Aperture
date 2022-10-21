@@ -8,7 +8,8 @@
     "prettier": "prettier --write .",
     "eslint": "eslint --debug .",
     "eslint:fix": "eslint --debug . --fix",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "check": "lint-staged"
   },
   "keywords": [
     "site",
