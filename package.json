@@ -6,8 +6,9 @@
   "type": "module",
   "scripts": {
     "prettier": "prettier --write .",
-    "lint": "eslint --debug .",
-    "lint:write": "eslint --debug . --fix"
+    "eslint": "eslint --debug .",
+    "eslint:fix": "eslint --debug . --fix",
+    "prepare": "husky install"
   },
   "keywords": [
     "site",
@@ -40,8 +41,18 @@
     "gulp-sass": "^5.1.0",
     "gulp-uglify-es": "^3.0.0",
     "gulp-version-number": "^0.2.4",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
     "sass": "^1.55.0",
     "webpack-stream": "^7.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.(js|scss|html)": ["npm run prettier", "npm run eslint:fix", "git add"],
   }
 }
