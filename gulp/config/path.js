@@ -1,3 +1,4 @@
+// Core
 import * as path from 'path';
 
 const rootFolder = path.basename(path.resolve());
@@ -18,6 +19,7 @@ export const folderPath = {
     js: replaceBackslash(path.join(__dirname, buildFolder, 'scripts')),
     images: replaceBackslash(path.join(__dirname, buildFolder, 'images')),
     videos: replaceBackslash(path.join(__dirname, buildFolder, 'videos')),
+    fonts: replaceBackslash(path.join(__dirname, buildFolder, 'fonts')),
   },
   src: {
     files: replaceBackslash(
@@ -62,6 +64,9 @@ export const folderPath = {
         '**',
         '*.{jpg,jpeg,png,gif,webp,svg}'
       )
+    ),
+    videos: replaceBackslash(
+      path.join(__dirname, srcFolder, 'assets', '**', '*.{mp4,avi,webm}')
     ),
   },
   clean: buildFolder,

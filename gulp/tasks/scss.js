@@ -4,11 +4,10 @@ import dartSass from 'sass';
 import gulpSass from 'gulp-sass';
 import rename from 'gulp-rename';
 import groupMediaQueries from 'gulp-group-css-media-queries';
-import webpcss from 'gulp-webpcss';
 import autoprefixer from 'gulp-autoprefixer';
 import cleanCss from 'gulp-clean-css';
 
-// Pathes
+// Paths
 import { folderPath } from '../config/path.js';
 
 // Plugins
@@ -19,35 +18,22 @@ const sass = gulpSass(dartSass);
 export function scss() {
   return gulp
     .src(folderPath.src.scss, { sourcemaps: true })
-    .pipe(
-      plugins.plumber(
-        plugins.notify.onError({
-          title: 'SCSS',
-          message: 'Error: <%= error.message %>',
-        })
-      )
-    )
+    .pipe(plugins.plumber())
     .pipe(plugins.replace(/@img\//g, '../images/'))
+    .pipe(plugins.replace(/@videos\//g, '../videos/'))
     .pipe(
       sass({
-        outputStyle: 'expanded',
-      })
-    )
-    .pipe(groupMediaQueries())
-    .pipe(
-      webpcss({
-        webpClass: '.webp',
-        noWebpClass: '.no-webp',
+        outputStyle: 'compressed',
       })
     )
     .pipe(
       autoprefixer({
-        grid: true,
-        overrideBrowserlist: ['last 3 versions'],
+        grid: 'autoplace',
+        flexbox: true,
         cascade: true,
       })
     )
-    .pipe(gulp.dest(folderPath.build.css))
+    .pipe(groupMediaQueries())
     .pipe(cleanCss())
     .pipe(
       rename({

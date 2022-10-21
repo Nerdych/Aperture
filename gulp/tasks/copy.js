@@ -1,5 +1,7 @@
+// Core
 import gulp from 'gulp';
 
+// Paths
 import { folderPath } from '../config/path.js';
 
 export function copy() {

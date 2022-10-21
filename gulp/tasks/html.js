@@ -1,8 +1,8 @@
 // Core
 import gulp from 'gulp';
 import fileInclude from 'gulp-file-include';
-import webpHtmlNoSvg from 'gulp-webp-html-nosvg';
 import versionNumber from 'gulp-version-number';
+import htmlmin from 'gulp-htmlmin';
 
 // Pathes
 import { folderPath } from '../config/path.js';
@@ -13,21 +13,21 @@ import { plugins } from '../config/plugins.js';
 export function html() {
   return gulp
     .src(folderPath.src.html)
-    .pipe(
-      plugins.plumber(
-        plugins.notify.onError({
-          title: 'HTML',
-          message: 'Error: <%= error.message %>',
-        })
-      )
-    )
+    .pipe(plugins.plumber())
     .pipe(fileInclude())
     .pipe(plugins.replace(/@img\//g, 'images/'))
     .pipe(plugins.replace(/@styles\//g, 'css/'))
     .pipe(plugins.replace(/@scripts\//g, 'scripts/'))
     .pipe(plugins.replace(/@videos\//g, 'videos/'))
     .pipe(plugins.replace(/[.]scss/g, '.min.css'))
-    .pipe(webpHtmlNoSvg())
+    .pipe(
+      htmlmin({
+        collapseWhitespace: true,
+        collapseBooleanAttributes: true,
+        collapseInlineTagWhitespace: true,
+        removeComments: true,
+      })
+    )
     .pipe(
       versionNumber({
         value: '%DT%',

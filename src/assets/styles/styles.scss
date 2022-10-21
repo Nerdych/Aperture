@@ -4,6 +4,9 @@ $e: green;
 
 body {
   color: $e;
-
+  display: grid;
+  grid-template-columns: auto;
+  transform: rotate(0.5deg);
+  flex-direction: column;
   background: url('@img/abstract@1x.jpg') 0 0 no-repeat;
 }

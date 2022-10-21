@@ -1,7 +1,7 @@
 // Core
 import gulp from 'gulp';
 
-// Pathes
+// Paths
 import { folderPath } from './gulp/config/path.js';
 
 // Tasks

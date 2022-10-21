@@ -1,7 +1,7 @@
 // Core
 import { deleteAsync } from 'del';
 
-// Pathes
+// Paths
 import { folderPath } from '../config/path.js';
 
 export async function reset() {
