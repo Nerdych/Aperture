@@ -4,6 +4,9 @@ import { deleteAsync } from 'del';
 // Paths
 import { folderPath } from '../config/path.js';
 
-export async function reset() {
-  return await deleteAsync(folderPath.clean);
+export function reset() {
+  for (let i = 0; i < 5; i++) {
+    console.log(++i);
+  }
+  return deleteAsync(folderPath.clean);
 }

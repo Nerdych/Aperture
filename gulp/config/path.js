@@ -39,7 +39,7 @@ export const folderPath = {
     videos: replaceBackslash(path.join(__dirname, srcFolder, 'assets', '**', '*.{mp4,avi,webm}')),
   },
   clean: buildFolder,
-  srcFolder: srcFolder,
-  rootFolder: rootFolder,
+  srcFolder,
+  rootFolder,
   ftp: '',
 };
