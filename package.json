@@ -5,7 +5,9 @@
   "main": "gulpfile.js",
   "type": "module",
   "scripts": {
-    "prettier": "prettier --write ."
+    "prettier": "prettier --write .",
+    "lint": "eslint --debug .",
+    "lint:write": "eslint --debug . --fix"
   },
   "keywords": [
     "site",
@@ -19,6 +21,10 @@
     "browser-sync": "^2.27.10",
     "core-js": "^3.25.5",
     "del": "^7.0.0",
+    "eslint": "^8.25.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-babel": "^8.0.0",

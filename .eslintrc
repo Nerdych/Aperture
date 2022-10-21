@@ -1,0 +1,45 @@
+{
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
+  "extends": ["airbnb"],
+  "plugins": ["import", "prettier"],
+  "rules": {
+    "no-underscore-dangle": "off",
+    "no-shadow": "off",
+
+    "arrow-parens": "off",
+    "object-curly-newline": "off",
+    "no-mixed-operators": "off",
+    "arrow-body-style": "off",
+    "function-paren-newline": "off",
+    "no-plusplus": "off",
+    "space-before-function-paren": 0,
+
+    "max-len": ["error", 120, 2, { "ignoreUrls": true }],
+
+    "import/prefer-default-export": "off",
+    "import/no-extraneous-dependencies": "off",
+    "import/extensions": "off",
+
+    "prefer-destructuring": "off",
+
+    "prettier/prettier": [
+      "error",
+      {
+        "arrowParens": "always",
+        "bracketSpacing": true,
+        "bracketSameLine": false,
+        "jsxBracketSameLine": false,
+        "trailingComma": "all",
+        "tabWidth": 2,
+        "printWidth": 120,
+        "singleQuote": true,
+        "semi": true,
+        "useTabs": false
+      }
+    ]
+  }
+}
