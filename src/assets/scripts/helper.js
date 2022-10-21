@@ -10,3 +10,4 @@ const a = 5;
 
 const lol = () => {};
 const a = () => {};
+const b = ;
