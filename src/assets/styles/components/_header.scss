@@ -1,3 +1,22 @@
-div {
-  color: black;
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: $header-height;
+  background-color: $light-black;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 150px;
+}
+
+.header__list {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  height: 100%;
 }

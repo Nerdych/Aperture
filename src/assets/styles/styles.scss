@@ -1,1 +1,8 @@
 @import './imports';
+
+body {
+  padding-top: $header-height;
+  background-color: $dark-black;
+  color: $white;
+  font-size: $main-font-size;
+}

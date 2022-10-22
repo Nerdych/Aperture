@@ -52,6 +52,8 @@ samp {
 
 a {
   background-color: transparent;
+  color: inherit;
+  text-decoration: none;
 }
 
 abbr {
@@ -80,7 +82,12 @@ sup {
 }
 
 img {
+  display: inline-block;
   border-style: none;
+}
+
+ul {
+  list-style: none;
 }
 
 button,
@@ -143,4 +150,44 @@ textarea {
 
 [hidden] {
   display: none;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 100px;
+  background-color: #181818;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 150px;
+}
+
+.header__list {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  height: 100%;
+}
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 14px;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body {
+  padding-top: 100px;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 14px;
 }
