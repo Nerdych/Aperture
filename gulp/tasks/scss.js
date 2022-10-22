@@ -24,6 +24,7 @@ export function scss() {
     .pipe(plugins.plumber())
     .pipe(plugins.replace(/@img\//g, '../images/'))
     .pipe(plugins.replace(/@videos\//g, '../videos/'))
+    .pipe(plugins.replace(/@fonts\//g, '../fonts/'))
     .pipe(sass())
     .pipe(
       autoprefixer({

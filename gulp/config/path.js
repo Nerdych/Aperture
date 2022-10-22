@@ -29,6 +29,7 @@ export const folderPath = {
     images: replaceBackslash(path.join(__dirname, srcFolder, 'assets', 'images', '**', '*.{jpg,jpeg,png,gif,webp}')),
     svg: replaceBackslash(path.join(__dirname, srcFolder, 'assets', 'images', '**', '*.{svg,ico}')),
     videos: replaceBackslash(path.join(__dirname, srcFolder, 'assets', 'videos', '**', '*.*')),
+    fonts: replaceBackslash(path.join(__dirname, srcFolder, 'assets', 'fonts', '**', '*.{woff2,woff,ttf}')),
   },
   watch: {
     files: replaceBackslash(path.join(__dirname, srcFolder, 'files', '**', '*.*')),
