@@ -10,6 +10,6 @@ export function server() {
       baseDir: folderPath.build.html,
     },
     notify: false,
-    port: 3000,
+    port: 3001,
   });
 }
