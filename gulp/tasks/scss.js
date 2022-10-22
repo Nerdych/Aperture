@@ -22,9 +22,6 @@ export function scss() {
   return gulp
     .src(folderPath.src.scss, { sourcemaps: true })
     .pipe(plugins.plumber())
-    .pipe(plugins.replace(/@img\//g, '../images/'))
-    .pipe(plugins.replace(/@videos\//g, '../videos/'))
-    .pipe(plugins.replace(/@fonts\//g, '../fonts/'))
     .pipe(sass())
     .pipe(
       autoprefixer({
@@ -40,6 +37,9 @@ export function scss() {
         extname: '.min.css',
       })
     )
+    .pipe(plugins.replace(/@img\//g, '../images/'))
+    .pipe(plugins.replace(/@videos\//g, '../videos/'))
+    .pipe(plugins.replace(/@fonts\//g, '../fonts/'))
     .pipe(gulp.dest(folderPath.build.css))
     .pipe(plugins.browsersync.stream());
 }

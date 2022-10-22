@@ -13,6 +13,7 @@ import { scss } from './gulp/tasks/scss.js';
 import { js } from './gulp/tasks/js.js';
 import { images } from './gulp/tasks/images.js';
 import { videos } from './gulp/tasks/videos.js';
+import { fonts } from './gulp/tasks/fonts.js';
 
 function watcher() {
   gulp.watch(folderPath.watch.files, copy);
@@ -23,7 +24,7 @@ function watcher() {
   gulp.watch(folderPath.watch.videos, videos);
 }
 
-const mainTasks = gulp.parallel(copy, html, scss, js, images, videos);
+const mainTasks = gulp.parallel(copy, html, scss, js, images, videos, fonts);
 const devTasks = gulp.parallel(watcher, server);
 
 const dev = gulp.series(reset, mainTasks, devTasks);

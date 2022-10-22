@@ -16,7 +16,7 @@
     "selector-pseudo-element-colon-notation": "double",
     "no-unknown-animations": true,
     "color-hex-case": "lower",
-    "color-hex-length": "short",
+    "color-hex-length": "long",
     "font-family-name-quotes": "always-unless-keyword",
     "function-comma-space-after": "always",
     "function-comma-space-before": "never",

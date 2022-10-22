@@ -11,9 +11,7 @@ export function fonts() {
   return gulp
     .src(folderPath.src.fonts)
     .pipe(plugins.plumber())
-    .pipe(plugins.newer(folderPath.build.images))
-    .pipe(gulp.dest(folderPath.build.images))
-    .pipe(gulp.src(folderPath.src.svg))
-    .pipe(gulp.dest(folderPath.build.images))
+    .pipe(plugins.newer(folderPath.build.fonts))
+    .pipe(gulp.dest(folderPath.build.fonts))
     .pipe(plugins.browsersync.stream());
 }
