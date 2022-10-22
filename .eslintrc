@@ -17,6 +17,7 @@
     "function-paren-newline": "off",
     "no-plusplus": "off",
     "space-before-function-paren": 0,
+    "linebreak-style": "off",
     "max-len": ["error", 120, 2, { "ignoreUrls": true }],
     "comma-dangle": [
       "error",
@@ -47,8 +48,10 @@
         "printWidth": 120,
         "singleQuote": true,
         "semi": true,
-        "useTabs": false
+        "useTabs": false,
+        "endOfLine": "crlf"
       }
     ]
   }
 }
+

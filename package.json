@@ -8,8 +8,8 @@
     "prettier": "prettier --write .",
     "eslint": "eslint --debug .",
     "eslint:fix": "eslint --debug . --fix",
-    "stylelint": "stylelint src/**/*.scss",
-    "stylelint:fix": "stylelint src/**/*.scss --fix",
+    "stylelint": "stylelint ./**/*.{css,scss}",
+    "stylelint:fix": "stylelint ./**/*.{css,scss} --fix",
     "prepare": "husky install",
     "check": "lint-staged"
   },
