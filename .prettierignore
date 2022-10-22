@@ -3,6 +3,7 @@
 dist
 node_modules
 build
+docs
 
 package.json
 package-lock.json

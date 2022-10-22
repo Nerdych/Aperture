@@ -10,6 +10,9 @@ import { folderPath } from '../config/path.js';
 // Plugins
 import { plugins } from '../config/plugins.js';
 
+// Constants
+import { constants } from '../config/constants.js';
+
 export function html() {
   return gulp
     .src(folderPath.src.html)
@@ -21,26 +24,32 @@ export function html() {
     .pipe(plugins.replace(/@videos\//g, 'videos/'))
     .pipe(plugins.replace(/[.]scss/g, '.min.css'))
     .pipe(
-      htmlmin({
-        collapseWhitespace: true,
-        collapseBooleanAttributes: true,
-        collapseInlineTagWhitespace: true,
-        removeComments: true,
-      })
+      plugins.gulpIf(
+        constants.isBuild,
+        htmlmin({
+          collapseWhitespace: true,
+          collapseBooleanAttributes: true,
+          collapseInlineTagWhitespace: true,
+          removeComments: true,
+        })
+      )
     )
     .pipe(
-      versionNumber({
-        value: '%DT%',
-        append: {
-          key: '_v',
-          cover: 0,
-          to: ['css', 'js'],
-        },
-        output: {
-          file: 'gulp/version.json',
-        },
-      })
+      plugins.gulpIf(
+        constants.isBuild,
+        versionNumber({
+          value: '%DT%',
+          append: {
+            key: '_v',
+            cover: 0,
+            to: ['css', 'js'],
+          },
+          output: {
+            file: 'gulp/version.json',
+          },
+        })
+      )
     )
     .pipe(gulp.dest(folderPath.build.html))
-    .pipe(plugins.browsersync.stream());
+    .pipe(plugins.gulpIf(constants.isDev, plugins.browsersync.stream()));
 }

@@ -4,7 +4,7 @@ import * as path from 'path';
 const rootFolder = path.basename(path.resolve());
 const __dirname = path.resolve();
 
-const buildFolder = './dist';
+const buildFolder = './docs';
 const srcFolder = './src';
 
 function replaceBackslash(path) {
@@ -41,5 +41,4 @@ export const folderPath = {
   clean: buildFolder,
   srcFolder,
   rootFolder,
-  ftp: '',
 };

@@ -13,6 +13,9 @@ import { folderPath } from '../config/path.js';
 // Plugins
 import { plugins } from '../config/plugins.js';
 
+// Constants
+import { constants } from '../config/constants.js';
+
 const sass = gulpSass(dartSass);
 
 export function scss() {
@@ -21,11 +24,7 @@ export function scss() {
     .pipe(plugins.plumber())
     .pipe(plugins.replace(/@img\//g, '../images/'))
     .pipe(plugins.replace(/@videos\//g, '../videos/'))
-    .pipe(
-      sass({
-        outputStyle: 'compressed',
-      })
-    )
+    .pipe(sass())
     .pipe(
       autoprefixer({
         grid: 'autoplace',
@@ -33,8 +32,8 @@ export function scss() {
         cascade: true,
       })
     )
-    .pipe(groupMediaQueries())
-    .pipe(cleanCss())
+    .pipe(plugins.gulpIf(constants.isBuild, groupMediaQueries()))
+    .pipe(plugins.gulpIf(constants.isBuild, cleanCss()))
     .pipe(
       rename({
         extname: '.min.css',
