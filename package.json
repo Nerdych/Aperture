@@ -8,6 +8,8 @@
     "prettier": "prettier --write .",
     "eslint": "eslint --debug .",
     "eslint:fix": "eslint --debug . --fix",
+    "stylelint": "stylelint src/**/*.scss",
+    "stylelint:fix": "stylelint src/**/*.scss --fix",
     "prepare": "husky install",
     "check": "lint-staged"
   },
@@ -46,6 +48,9 @@
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
     "sass": "^1.55.0",
-    "webpack-stream": "^7.0.0"
+    "stylelint": "^14.14.0",
+    "stylelint-config-recommended": "^9.0.0",
+    "stylelint-order": "^5.0.0",
+    "stylelint-scss": "^4.3.0"
   }
 }
