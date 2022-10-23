@@ -3,8 +3,14 @@
   top: 0;
   right: 0;
   left: 0;
+  z-index: 1000;
   height: $header-height;
   background-color: $light-black;
+}
+
+.header__logo {
+  display: inline-flex;
+  align-items: center;
 }
 
 .header__wrapper {

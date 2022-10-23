@@ -2,8 +2,24 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  width: fit-content;
   padding: 10px 20px;
   border-radius: 14px;
   background-color: $white;
   color: $dark-black;
+  cursor: pointer;
+
+  &--icon {
+    gap: 5px;
+    padding: 5px 15px 5px 5px;
+
+    &::before {
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      border-radius: 14px;
+      background-color: $dark-black;
+      content: '';
+    }
+  }
 }

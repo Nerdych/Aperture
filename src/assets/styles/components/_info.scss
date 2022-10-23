@@ -1,0 +1,26 @@
+.info {
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+}
+
+.info__list {
+  display: flex;
+  gap: 15px;
+}
+
+.info__parameter {
+  font-size: 0;
+}
+
+.info__item {
+  display: flex;
+  gap: 3px;
+}
+
+.info__value {
+  display: flex;
+  align-items: flex-start;
+  font-size: 12px;
+  line-height: 12px;
+}

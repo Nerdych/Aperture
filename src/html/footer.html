@@ -1,1 +1,97 @@
-<footer></footer>
+<footer>
+  <div class="container">
+    <section class="footer__wrapper footer__links">
+      <h2 class="visually-hidden">Links</h2>
+
+      <div class="footer__logo">
+        <a class="header__logo" href="#">
+          <img width="128" height="31" srcset="@img/logo.svg" alt="Aperture logo" />
+        </a>
+        <p class="footer__text">Photographers & videographers capturing the world around us.</p>
+      </div>
+
+      <div class="footer__lists">
+        <div class="footer__list-wrapper">
+          <p class="footer__list-title">Business areas</p>
+          <ul class="footer__list">
+            <li>
+              <a href="#">Product Photography</a>
+            </li>
+            <li>
+              <a href="#">Architecture Photography</a>
+            </li>
+            <li>
+              <a href="#">Drone Photography</a>
+            </li>
+            <li>
+              <a href="#">Wildlife Photography</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__list-wrapper">
+          <p class="footer__list-title">Pages</p>
+          <ul class="footer__list">
+            <li>
+              <a href="#">Gear cage</a>
+            </li>
+            <li>
+              <a href="#">Featured images</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+            <li>
+              <a href="#">Style guide</a>
+            </li>
+            <li>
+              <a href="#">Instructions</a>
+            </li>
+            <li>
+              <a href="#">Changelog</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer__wrapper footer__subscribe">
+      <div class="footer__info">
+        <h2 class="footer__subscribe-title">Subscribe to our newsletter</h2>
+        <p class="footer__text">Read about all the things we do.</p>
+      </div>
+      <form action="#" method="post" class="footer__form">
+        <label class="input-label">
+          Subscribe input
+          <input class="input footer__input" type="text" placeholder="Email" />
+        </label>
+        <button type="submit" class="footer__submit">
+          @@include("svg.html", {id: "send", class: "input__icon", width: "16px", height: "16px"})
+        </button>
+      </form>
+    </section>
+
+    <section class="footer__wrapper footer__other">
+      <small class="footer__copyright">© Aperture Photography, Inc. All rights reserved. Licensing</small>
+      <ul class="footer__socials">
+        <li>
+          <a class="footer__socials-item" href="#">
+            <span class="visually-hidden">Twitter</span>
+            @@include("svg.html", {id: "twitter", class: "footer__socials-icon", width: "24px", height: "20px"})
+          </a>
+        </li>
+        <li>
+          <a class="footer__socials-item" href="#">
+            <span class="visually-hidden">Instagram</span>
+            @@include("svg.html", {id: "instagram", class: "footer__socials-icon", width: "24px", height: "24px"})
+          </a>
+        </li>
+        <li>
+          <a class="footer__socials-item" href="#">
+            <span class="visually-hidden">Facebook</span>
+            @@include("svg.html", {id: "facebook", class: "footer__socials-icon", width: "24px", height: "24px"})
+          </a>
+        </li>
+      </ul>
+    </section>
+  </div>
+</footer>

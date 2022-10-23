@@ -26,9 +26,15 @@ export const folderPath = {
     html: replaceBackslash(path.join(__dirname, srcFolder, '*.html')),
     scss: replaceBackslash(path.join(__dirname, srcFolder, 'assets', 'styles', 'styles.scss')),
     js: replaceBackslash(path.join(__dirname, srcFolder, 'assets', 'scripts', '**', '*.js')),
-    images: replaceBackslash(path.join(__dirname, srcFolder, 'assets', 'images', '**', '*.{jpg,jpeg,png,gif,webp}')),
-    svg: replaceBackslash(path.join(__dirname, srcFolder, 'assets', 'images', '**', '*.{svg,ico}')),
-    videos: replaceBackslash(path.join(__dirname, srcFolder, 'assets', 'videos', '**', '*.*')),
+    images: replaceBackslash(
+      path.join(__dirname, srcFolder, 'assets', 'images', '**', '*.{jpg,jpeg,png,gif,webp,ico}')
+    ),
+    svg: [
+      replaceBackslash(path.join(__dirname, srcFolder, 'assets', 'images', '**', '*.svg')),
+      `!${replaceBackslash(path.join(__dirname, srcFolder, 'assets', 'images', 'icons', '*'))}`,
+    ],
+    svgIcons: replaceBackslash(path.join(__dirname, srcFolder, 'assets', 'images', 'icons', '**', '*.svg')),
+    videos: replaceBackslash(path.join(__dirname, srcFolder, 'assets', 'videos', '**', '*.{avi,mp4,webm}')),
     fonts: replaceBackslash(path.join(__dirname, srcFolder, 'assets', 'fonts', '**', '*.{woff2,woff,ttf}')),
   },
   watch: {

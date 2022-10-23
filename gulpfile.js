@@ -14,6 +14,7 @@ import { js } from './gulp/tasks/js.js';
 import { images } from './gulp/tasks/images.js';
 import { videos } from './gulp/tasks/videos.js';
 import { fonts } from './gulp/tasks/fonts.js';
+import { sprite } from './gulp/tasks/sprite.js';
 
 function watcher() {
   gulp.watch(folderPath.watch.files, copy);
@@ -24,7 +25,7 @@ function watcher() {
   gulp.watch(folderPath.watch.videos, videos);
 }
 
-const mainTasks = gulp.parallel(copy, html, scss, js, images, videos, fonts);
+const mainTasks = gulp.parallel(copy, html, scss, js, images, videos, fonts, sprite);
 const devTasks = gulp.parallel(watcher, server);
 
 const dev = gulp.series(reset, mainTasks, devTasks);
@@ -32,3 +33,4 @@ const build = gulp.series(reset, mainTasks);
 
 export { dev };
 export { build };
+export { sprite };
