@@ -1,6 +1,1 @@
-"use strict";
-
-function sayHello() {
-  console.log('Hello man');
-}
-sayHello();
+"use strict";function sayHello(){console.log("Hello man")}sayHello();
