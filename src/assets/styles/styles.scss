@@ -189,6 +189,8 @@ body {
 
   @media screen and (max-width: $tablet) {
     left: 50%;
+    width: 80%;
+    max-width: 80%;
     text-align: center;
     transform: translate(-50%, -50%);
   }
