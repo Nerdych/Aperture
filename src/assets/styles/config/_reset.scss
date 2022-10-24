@@ -81,7 +81,9 @@ textarea {
 
 button,
 input {
+  border: 0;
   overflow: visible;
+  appearance: none;
 }
 
 button,

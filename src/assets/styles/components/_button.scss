@@ -6,15 +6,21 @@
   padding: 10px 20px;
   border: 0;
   border-radius: 14px;
+  overflow: hidden;
   background-color: var(--white);
   color: var(--dark-black);
   cursor: pointer;
+  transition: color 0.3s, background-color 0.3s;
 
   &--icon {
-    gap: 5px;
-    padding: 5px 15px 5px 5px;
+    position: relative;
+    padding: 10px;
+    padding-left: 42px;
 
     &::before {
+      position: absolute;
+      left: 5px;
+      z-index: 0;
       display: inline-block;
       width: 32px;
       height: 32px;
@@ -22,5 +28,33 @@
       background-color: var(--dark-black);
       content: '';
     }
+
+    &:hover {
+      color: var(--white);
+
+      &::before {
+        animation-name: hover-animation;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+}
+
+@keyframes hover-animation {
+  0% {
+    width: 32px;
+    height: 32px;
+  }
+
+  50% {
+    width: 32px;
+    height: 32px;
+    transform: translateX(150%);
+  }
+
+  100% {
+    transform: translateX(150%) scale(10);
+    transform-origin: 50% 50%;
   }
 }
