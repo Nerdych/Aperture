@@ -18,7 +18,6 @@
     "no-plusplus": "off",
     "space-before-function-paren": 0,
     "linebreak-style": "off",
-    "max-len": ["error", 120, 2, { "ignoreUrls": true }],
     "comma-dangle": [
       "error",
       {
@@ -36,21 +35,6 @@
 
     "prefer-destructuring": "off",
 
-    "prettier/prettier": [
-      "error",
-      {
-        "arrowParens": "always",
-        "bracketSpacing": true,
-        "bracketSameLine": false,
-        "jsxBracketSameLine": false,
-        "trailingComma": "es5",
-        "tabWidth": 2,
-        "printWidth": 120,
-        "singleQuote": true,
-        "semi": true,
-        "useTabs": false,
-        "endOfLine": "crlf"
-      }
-    ]
+    "prettier/prettier": ["error", {}, { "usePrettierrc": true }]
   }
 }
