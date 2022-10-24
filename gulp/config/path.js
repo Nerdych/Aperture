@@ -27,7 +27,7 @@ export const folderPath = {
     scss: replaceBackslash(path.join(__dirname, srcFolder, 'assets', 'styles', 'styles.scss')),
     js: replaceBackslash(path.join(__dirname, srcFolder, 'assets', 'scripts', '**', '*.js')),
     images: replaceBackslash(
-      path.join(__dirname, srcFolder, 'assets', 'images', '**', '*.{jpg,jpeg,png,gif,webp,ico}')
+      path.join(__dirname, srcFolder, 'assets', 'images', '**', '*.{jpg,jpeg,png,gif,webp,ico,avif}')
     ),
     svg: [
       replaceBackslash(path.join(__dirname, srcFolder, 'assets', 'images', '**', '*.svg')),

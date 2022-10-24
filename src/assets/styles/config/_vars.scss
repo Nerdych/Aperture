@@ -1,8 +1,16 @@
-$main-font: 'Poppins';
-$main-font-size: 14px;
-$header-height: 100px;
+:root {
+  --main-font: 'Poppins';
+  --main-font-size: 14px;
+  --header-height: 100px;
 
-$gray: #c0c0c0;
-$light-black: #181818;
-$dark-black: #000000;
-$white: #ffffff;
+  --gray: #c0c0c0;
+  --light-black: #181818;
+  --dark-black: #000000;
+  --white: #ffffff;
+}
+
+@media screen and (max-width: $laptop) {
+  :root {
+    --main-font-size: 12px;
+  }
+}

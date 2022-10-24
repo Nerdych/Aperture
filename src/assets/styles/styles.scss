@@ -1,16 +1,18 @@
 @import './imports';
 
 body {
-  padding-top: $header-height;
-  background-color: $dark-black;
-  color: $white;
-  font-size: $main-font-size;
+  padding-top: var(--header-height);
+  background-color: var(--dark-black);
+  color: var(--white);
+  font-size: var(--main-font-size);
   line-height: 20px;
 }
 
 .container {
-  max-width: 1200px;
-  margin: auto;
+  max-width: 1260px;
+  margin: 0 auto;
+  padding-right: 30px;
+  padding-left: 30px;
 }
 
 .section-container {
@@ -21,19 +23,27 @@ body {
 
 .title {
   margin-bottom: 15px;
-  color: $white;
+  color: var(--white);
   font-size: 40px;
   font-weight: 600;
   line-height: 42px;
   text-align: center;
+
+  @media screen and (max-width: $tablet) {
+    font-size: 26px;
+  }
 }
 
 .subtitle {
-  color: $gray;
+  color: var(--gray);
   font-size: 23px;
   font-weight: 400;
   line-height: 30px;
   text-align: center;
+
+  @media screen and (max-width: $tablet) {
+    font-size: 20px;
+  }
 }
 
 .input-label {
@@ -48,13 +58,14 @@ body {
 }
 
 .input__icon {
-  fill: $white;
+  fill: var(--white);
 }
 
 .intro {
   position: relative;
-  height: calc(100vh - $header-height);
-  padding-top: 500px;
+  display: flex;
+  justify-content: center;
+  height: calc(100vh - var(--header-height));
   background-image: url('@img/cost@1x.jpg');
   background-repeat: no-repeat;
   background-position: center;
@@ -64,13 +75,15 @@ body {
 }
 
 .intro__container {
+  position: absolute;
+  bottom: 90px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .intro__subtitle {
-  color: $gray;
+  color: var(--gray);
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -80,11 +93,16 @@ body {
   font-size: 54px;
   font-weight: 600;
   line-height: 60px;
+  text-align: center;
+
+  @media screen and (max-width: $tablet) {
+    font-size: 40px;
+  }
 }
 
 .intro__text {
   max-width: 580px;
-  color: $gray;
+  color: var(--gray);
   text-align: center;
 }
 
@@ -98,6 +116,10 @@ body {
   justify-content: center;
   grid-gap: 15px;
   margin-top: 40px;
+
+  @media screen and (max-width: $tablet) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .directions__item {
@@ -106,7 +128,7 @@ body {
   justify-content: end;
   height: 600px;
   padding: 30px;
-  background-color: $gray;
+  background-color: var(--gray);
   background-position: center;
   background-size: cover;
 
@@ -135,13 +157,13 @@ body {
 
 .directions__item-description {
   margin-bottom: 20px;
-  color: $gray;
+  color: var(--gray);
 }
 
 .work {
   position: relative;
   height: 600px;
-  background-color: $dark-black;
+  background-color: var(--dark-black);
   background-position: center;
   background-size: cover;
 }
@@ -162,8 +184,14 @@ body {
   position: absolute;
   top: 50%;
   right: 60px;
-  width: 300px;
+  max-width: 300px;
   transform: translateY(-50%);
+
+  @media screen and (max-width: $tablet) {
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .work__title {
@@ -174,7 +202,7 @@ body {
 }
 
 .work__description {
-  color: $gray;
+  color: var(--gray);
 }
 
 .tools {
@@ -182,6 +210,12 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 540px;
+
+  @media screen and (max-width: $tablet) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 1080px;
+  }
 }
 
 .tools__container {
@@ -189,11 +223,12 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 0 30px;
 }
 
 .tools__subtitle {
   margin-bottom: 5px;
-  color: $gray;
+  color: var(--gray);
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -210,7 +245,7 @@ body {
 }
 
 .tools__image {
-  background-color: $dark-black;
+  background-color: var(--dark-black);
   background-position: center;
   background-size: cover;
 
@@ -225,7 +260,9 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 50px;
   margin-top: 80px;
 }
 
@@ -233,10 +270,10 @@ body {
   padding: 120px 0 105px;
 }
 
-.help__button {
-  margin-top: 20px;
+.help__title {
+  max-width: 600px;
 }
 
-.help__container {
-  max-width: 600px;
+.help__button {
+  margin-top: 20px;
 }

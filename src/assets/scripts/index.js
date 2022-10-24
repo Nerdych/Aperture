@@ -1,5 +1,8 @@
-function sayHello() {
-  console.log('Hello man');
-}
+const $menuButton = document.querySelector('#menu-button');
+const $nav = document.querySelector('#nav');
 
-sayHello();
+$menuButton.addEventListener('click', () => {
+  $menuButton.classList.toggle('header__menu--active');
+
+  $nav.classList.toggle('header__nav--active');
+});

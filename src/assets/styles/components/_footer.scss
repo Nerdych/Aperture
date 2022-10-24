@@ -4,7 +4,16 @@
 
 .footer__wrapper {
   display: grid;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 60% auto;
+  grid-gap: 30px;
+
+  @media screen and (max-width: $laptop) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (max-width: $tablet) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .footer__links {
@@ -13,7 +22,7 @@
 
 .footer__text {
   margin-top: 20px;
-  color: $gray;
+  color: var(--gray);
 }
 
 .footer__lists {
@@ -29,7 +38,7 @@
 }
 
 .footer__list-title {
-  color: $gray;
+  color: var(--gray);
   text-transform: uppercase;
 }
 
@@ -42,12 +51,13 @@
 .footer__subscribe {
   align-items: center;
   padding: 35px 0;
-  border-top: 2px solid $white;
-  border-bottom: 2px solid $white;
+  border-top: 2px solid var(--white);
+  border-bottom: 2px solid var(--white);
 }
 
 .footer__form {
   position: relative;
+  max-width: 100%;
 }
 
 .footer__subscribe-title {
@@ -67,21 +77,34 @@
   width: 35px;
   height: 35px;
   border-radius: 11px;
-  background-color: $dark-black;
+  background-color: var(--dark-black);
   transform: translateY(-50%);
 }
 
 .footer__other {
+  grid-template-columns: 60% auto;
   padding: 55px 0 100px;
+
+  @media screen and (max-width: $tablet) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .footer__copyright {
-  color: $gray;
+  color: var(--gray);
   font-size: 14px;
+
+  @media screen and (max-width: $tablet) {
+    text-align: center;
+  }
 }
 
 .footer__socials {
   display: flex;
   justify-content: flex-end;
   gap: 20px;
+
+  @media screen and (max-width: $tablet) {
+    justify-content: center;
+  }
 }

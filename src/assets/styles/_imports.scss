@@ -1,8 +1,9 @@
+@import './config/breakpoints';
 @import './config/vars';
 @import './config/fonts';
 @import './config/reset';
-@import './mixins/image-set';
 @import './config/hidden';
+@import './mixins/image-set';
 @import './components/header';
 @import './components/button';
 @import './components/info';

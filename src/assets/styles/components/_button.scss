@@ -4,9 +4,10 @@
   align-items: center;
   width: fit-content;
   padding: 10px 20px;
+  border: 0;
   border-radius: 14px;
-  background-color: $white;
-  color: $dark-black;
+  background-color: var(--white);
+  color: var(--dark-black);
   cursor: pointer;
 
   &--icon {
@@ -18,7 +19,7 @@
       width: 32px;
       height: 32px;
       border-radius: 14px;
-      background-color: $dark-black;
+      background-color: var(--dark-black);
       content: '';
     }
   }
