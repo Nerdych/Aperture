@@ -28,6 +28,7 @@ export function scss() {
         grid: 'autoplace',
         flexbox: true,
         cascade: true,
+        ignoreUnknownVersions: true,
       })
     )
     .pipe(plugins.gulpIf(constants.isBuild, groupMediaQueries()))
