@@ -1,1 +1,1 @@
-"use strict";const $menuButton=document.querySelector("#menu-button"),$nav=document.querySelector("#nav");$menuButton.addEventListener("click",(()=>{$menuButton.classList.toggle("header__menu--active"),$nav.classList.toggle("header__nav--active")}));
+!function(){"use strict";!function(){const e=document.querySelector("#menu-button"),t=document.querySelector("#nav");e.addEventListener("click",(()=>{e.classList.toggle("header__menu--active"),t.classList.toggle("header__nav--active")}))}()}();
