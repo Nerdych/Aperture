@@ -1,7 +1,8 @@
 <header class="header">
   <div class="container header__wrapper">
     <a class="header__logo" href="#">
-      <img width="128" height="31" srcset="@img/logo.svg" alt="Aperture logo" />
+      <img width="128" height="31" srcset="@img/logo.svg" alt="Aperture logo" class="logo-image" />
+      @@include("svg.html", {id: "camera", class: "camera-image", width: "31px", height: "31px"})
     </a>
 
     <button class="header__menu" id="menu-button">

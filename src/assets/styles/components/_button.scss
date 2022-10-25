@@ -34,7 +34,8 @@
       content: '';
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: var(--light-black);
       color: var(--white);
       transition: background-color 0s;
