@@ -1,11 +1,58 @@
 @import './imports';
 
+* {
+  @media (hover: hover) {
+    cursor: none;
+  }
+}
+
 body {
   padding-top: var(--header-height);
   background-color: var(--dark-black);
   color: var(--white);
   font-size: var(--main-font-size);
   line-height: 20px;
+}
+
+#cursor,
+#aura {
+  @media (hover: hover) {
+    position: fixed;
+    top: 100px;
+    left: 100px;
+    z-index: 10000;
+    border-radius: 100%;
+    transition: 0.5s transform cubic-bezier(0.68, -0.55, 0.27, 1.55), 0.2s opacity cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    user-select: none;
+    pointer-events: none;
+  }
+}
+
+#cursor {
+  @media (hover: hover) {
+    width: 8px;
+    height: 8px;
+    background-color: rgba(#ffffff, 0.7);
+    transform: translate(-50%, -50%);
+
+    &.hidden {
+      opacity: 0;
+    }
+  }
+}
+
+#aura {
+  @media (hover: hover) {
+    width: 46px;
+    height: 46px;
+    border: 1px solid rgba(#ffffff, 1);
+    background-color: rgba(#ffffff, 0.2);
+    transform: translate(-50%, -50%);
+
+    &.expand {
+      transform: scale(1.5) translate(-40%, -40%);
+    }
+  }
 }
 
 .container {

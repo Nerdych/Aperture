@@ -9,12 +9,12 @@
   overflow: hidden;
   background-color: var(--white);
   color: var(--dark-black);
-  cursor: pointer;
   transition: color 0.3s;
 
   span {
     z-index: 900;
     transition: transform 0.2s;
+    pointer-events: none;
   }
 
   &--icon {
@@ -52,6 +52,10 @@
         animation-fill-mode: forwards;
       }
     }
+  }
+
+  @media (hover: null) {
+    cursor: pointer;
   }
 }
 
