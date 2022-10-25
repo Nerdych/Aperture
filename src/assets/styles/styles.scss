@@ -93,6 +93,30 @@ body {
   }
 }
 
+.link {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -5px;
+    display: inline-block;
+    width: 0;
+    height: 2px;
+    background-color: var(--white);
+    transition: width 0.3s;
+  }
+
+  &:hover,
+  &:focus {
+    &::after {
+      left: 0;
+      width: 100%;
+    }
+  }
+}
+
 .input-label {
   font-size: 0;
 }
