@@ -16,7 +16,7 @@ body {
 
 #cursor,
 #aura {
-  @media (hover: hover) {
+  @media (hover: hover) and (pointer: fine) {
     position: fixed;
     top: 100px;
     left: 100px;
@@ -29,7 +29,7 @@ body {
 }
 
 #cursor {
-  @media (hover: hover) {
+  @media (hover: hover) and (pointer: fine) {
     width: 8px;
     height: 8px;
     background-color: rgba(#ffffff, 0.7);
@@ -42,7 +42,7 @@ body {
 }
 
 #aura {
-  @media (hover: hover) {
+  @media (hover: hover) and (pointer: fine) {
     width: 46px;
     height: 46px;
     border: 1px solid rgba(#ffffff, 1);
