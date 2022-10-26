@@ -55,6 +55,22 @@ body {
   }
 }
 
+.circle {
+  position: fixed;
+  top: var(--header-height);
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 0;
+  height: calc(100% - var(--header-height));
+  background-color: var(--light-black);
+  font-size: 0;
+  clip-path: polygon(0 0, 50% 0, 100% 100%, 0 100%);
+}
+
 .container {
   max-width: 1260px;
   margin: 0 auto;

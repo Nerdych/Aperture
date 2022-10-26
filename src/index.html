@@ -7,161 +7,165 @@
     <div id="cursor"></div>
     <div id="aura"></div>
 
-    <main>
-      <section class="intro">
-        @@include("html/info.html", { time: "1/2000s", lens: "f/11", iso: "100", label: "Iceland" })
+    <div data-barba="wrapper">
+      <main data-barba="container" data-barba-namespace="home">
+        <div class="circle">Loading...</div>
 
-        <div class="intro__container container">
-          <p class="intro__subtitle">Photographer & Filmmaker</p>
-          <h1 class="intro__title">Aperture Studios</h1>
-          <p class="intro__text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
-            tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae
-            erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique
-            posuere.
-          </p>
-        </div>
-      </section>
+        <section class="intro">
+          @@include("html/info.html", { time: "1/2000s", lens: "f/11", iso: "100", label: "Iceland" })
 
-      <section class="about">
-        <div class="container">
-          <h2 class="title">What we do</h2>
-          <p class="subtitle">The areas that we're specialized in.</p>
-          <ul class="services">
-            <li class="services__item">
-              <p class="services__item-title">Product Photography</p>
-              <p class="services__item-description">
-                Cras commodo consequat orci, in convallis risus egestas non. Nulla efficitur auctor hendrerit. Etiam ut
-                orci varius, faucibus libero ac, cursus quam.
-              </p>
-              <a href="#" class="button button--icon">
-                <span>Read more</span>
-              </a>
-            </li>
-            <li class="services__item">
-              <p class="services__item-title">Architecture Photography</p>
-              <p class="services__item-description">
-                Aenean porta neque eget consequat fringilla. Vestibulum ultrices, orci nec egestas pharetra, ligula est
-                semper enim, nec auctor sapien leo nec purus. Fusce tincidunt aliquet sapien, sit amet rhoncus leo
-                imperdiet nec.
-              </p>
-              <a href="#" class="button button--icon">
-                <span>Read more</span>
-              </a>
-            </li>
-            <li class="services__item">
-              <p class="services__item-title">Drone Photography</p>
-              <p class="services__item-description">
-                Mauris euismod elit et nisi ultrices, ut faucibus orci tincidunt. Duis tristique sed lorem a vestibulum.
-                Cras commodo consequat orci, in convallis risus egestas non. Nulla efficitur auctor hendrerit. Etiam ut
-                orci varius, faucibus libero ac, cursus quam.
-              </p>
-              <a href="#" class="button button--icon">
-                <span>Read more</span>
-              </a>
-            </li>
-            <li class="services__item">
-              <p class="services__item-title">Wildlife Photography</p>
-              <p class="services__item-description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque aliquam odio et faucibus.
-                Nulla rhoncus feugiat eros quis consectetur. Morbi neque ex, condimentum dapibus congue et, vulputate ut
-                ligula. Vestibulum sit amet urna turpis.
-              </p>
-              <a href="#" class="button button--icon">
-                <span>Read more</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="work work__first">
-        @@include("html/info.html", { time: "1", lens: "f/16", iso: "400", label: "Japan" })
-
-        <div class="work__content">
-          <h2 class="work__title">Sunset at Mount Fuji</h2>
-          <p class="work__description">
-            Duis tristique sed lorem a vestibulum. Cras commodo consequat orci, in convallis risus egestas non.
-          </p>
-        </div>
-      </section>
-
-      <section class="tools">
-        @@include("html/info.html", { time: "0,8", lens: "f/5,6", iso: "100", label: "Sweden" })
-        <div class="container tools__container">
-          <div class="tools__content">
-            <p class="tools__subtitle">The Gear cage</p>
-            <h2 class="tools__title">The tools that we use.</h2>
-            <p class="tools__description">
-              The say that "no place is boring if you've had a good night's sleep and have a pocket full of unexposed
-              film". While we don't shoot (a lot) of film these days — these are the tools that we actually use everyday
-              to capture the amazing things around us.
+          <div class="intro__container container">
+            <p class="intro__subtitle">Photographer & Filmmaker</p>
+            <h1 class="intro__title">Aperture Studios</h1>
+            <p class="intro__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
+              tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae
+              erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique
+              posuere.
             </p>
-            <a href="#" class="button button--icon">
-              <span>Check it out</span>
+          </div>
+        </section>
+
+        <section class="about">
+          <div class="container">
+            <h2 class="title">What we do</h2>
+            <p class="subtitle">The areas that we're specialized in.</p>
+            <ul class="services">
+              <li class="services__item">
+                <p class="services__item-title">Product Photography</p>
+                <p class="services__item-description">
+                  Cras commodo consequat orci, in convallis risus egestas non. Nulla efficitur auctor hendrerit. Etiam
+                  ut orci varius, faucibus libero ac, cursus quam.
+                </p>
+                <a href="#" class="button button--icon">
+                  <span>Read more</span>
+                </a>
+              </li>
+              <li class="services__item">
+                <p class="services__item-title">Architecture Photography</p>
+                <p class="services__item-description">
+                  Aenean porta neque eget consequat fringilla. Vestibulum ultrices, orci nec egestas pharetra, ligula
+                  est semper enim, nec auctor sapien leo nec purus. Fusce tincidunt aliquet sapien, sit amet rhoncus leo
+                  imperdiet nec.
+                </p>
+                <a href="#" class="button button--icon">
+                  <span>Read more</span>
+                </a>
+              </li>
+              <li class="services__item">
+                <p class="services__item-title">Drone Photography</p>
+                <p class="services__item-description">
+                  Mauris euismod elit et nisi ultrices, ut faucibus orci tincidunt. Duis tristique sed lorem a
+                  vestibulum. Cras commodo consequat orci, in convallis risus egestas non. Nulla efficitur auctor
+                  hendrerit. Etiam ut orci varius, faucibus libero ac, cursus quam.
+                </p>
+                <a href="#" class="button button--icon">
+                  <span>Read more</span>
+                </a>
+              </li>
+              <li class="services__item">
+                <p class="services__item-title">Wildlife Photography</p>
+                <p class="services__item-description">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque aliquam odio et faucibus.
+                  Nulla rhoncus feugiat eros quis consectetur. Morbi neque ex, condimentum dapibus congue et, vulputate
+                  ut ligula. Vestibulum sit amet urna turpis.
+                </p>
+                <a href="#" class="button button--icon">
+                  <span>Read more</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="work work__first">
+          @@include("html/info.html", { time: "1", lens: "f/16", iso: "400", label: "Japan" })
+
+          <div class="work__content">
+            <h2 class="work__title">Sunset at Mount Fuji</h2>
+            <p class="work__description">
+              Duis tristique sed lorem a vestibulum. Cras commodo consequat orci, in convallis risus egestas non.
+            </p>
+          </div>
+        </section>
+
+        <section class="tools">
+          @@include("html/info.html", { time: "0,8", lens: "f/5,6", iso: "100", label: "Sweden" })
+          <div class="container tools__container">
+            <div class="tools__content">
+              <p class="tools__subtitle">The Gear cage</p>
+              <h2 class="tools__title">The tools that we use.</h2>
+              <p class="tools__description">
+                The say that "no place is boring if you've had a good night's sleep and have a pocket full of unexposed
+                film". While we don't shoot (a lot) of film these days — these are the tools that we actually use
+                everyday to capture the amazing things around us.
+              </p>
+              <a href="#" class="button button--icon">
+                <span>Check it out</span>
+              </a>
+            </div>
+          </div>
+          <div class="tools__image"></div>
+        </section>
+
+        <section class="work work__second">
+          @@include("html/info.html", { time: "1/400s", lens: "f/3,5", iso: "100", label: "Costa Rica" })
+
+          <div class="work__content">
+            <h2 class="work__title">Monstera Leafs</h2>
+            <p class="work__description">
+              Vestibulum sit amet urna turpis. Mauris euismod elit et nisi ultrices, ut faucibus orci tincidunt.
+            </p>
+          </div>
+        </section>
+
+        <section class="clients">
+          <div class="container">
+            <h2 class="title">What we do</h2>
+            <p class="subtitle">The areas that we're specialized in.</p>
+            <ul class="clients__list">
+              <li class="clients__item">
+                <img loading="lazy" width="128" height="30" srcset="@img/hill.svg" alt="Hill Hayes logo" />
+              </li>
+              <li class="clients__item">
+                <img loading="lazy" width="128" height="78" srcset="@img/riskhansen.svg" alt="Riskhansen logo" />
+              </li>
+              <li class="clients__item">
+                <img loading="lazy" width="128" height="20" srcset="@img/studio.svg" alt="Studio Cai logo" />
+              </li>
+              <li class="clients__item">
+                <img loading="lazy" width="128" height="36" srcset="@img/chill.svg" alt="Chill Industries logo" />
+              </li>
+              <li class="clients__item">
+                <img loading="lazy" width="128" height="32" srcset="@img/stockholm.svg" alt="Stockholm logo" />
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="work work__third">
+          @@include("html/info.html", { time: "6", lens: "f/11", iso: "800", label: "Nepal" })
+
+          <div class="work__content">
+            <h2 class="work__title">Star fall in the Himalayas</h2>
+            <p class="work__description">
+              Nulla rhoncus feugiat eros quis consectetur. Morbi neque ex, condimentum dapibus congue et, vulputate ut
+              ligula.
+            </p>
+          </div>
+        </section>
+
+        <section class="help">
+          <div class="container section-container">
+            <h2 class="title help__title">Need help with photography or videography?</h2>
+            <p class="subtitle">We're here for you!</p>
+            <a href="#" class="button button--icon help__button">
+              <span>Get in touch</span>
             </a>
           </div>
-        </div>
-        <div class="tools__image"></div>
-      </section>
-
-      <section class="work work__second">
-        @@include("html/info.html", { time: "1/400s", lens: "f/3,5", iso: "100", label: "Costa Rica" })
-
-        <div class="work__content">
-          <h2 class="work__title">Monstera Leafs</h2>
-          <p class="work__description">
-            Vestibulum sit amet urna turpis. Mauris euismod elit et nisi ultrices, ut faucibus orci tincidunt.
-          </p>
-        </div>
-      </section>
-
-      <section class="clients">
-        <div class="container">
-          <h2 class="title">What we do</h2>
-          <p class="subtitle">The areas that we're specialized in.</p>
-          <ul class="clients__list">
-            <li class="clients__item">
-              <img loading="lazy" width="128" height="30" srcset="@img/hill.svg" alt="Hill Hayes logo" />
-            </li>
-            <li class="clients__item">
-              <img loading="lazy" width="128" height="78" srcset="@img/riskhansen.svg" alt="Riskhansen logo" />
-            </li>
-            <li class="clients__item">
-              <img loading="lazy" width="128" height="20" srcset="@img/studio.svg" alt="Studio Cai logo" />
-            </li>
-            <li class="clients__item">
-              <img loading="lazy" width="128" height="36" srcset="@img/chill.svg" alt="Chill Industries logo" />
-            </li>
-            <li class="clients__item">
-              <img loading="lazy" width="128" height="32" srcset="@img/stockholm.svg" alt="Stockholm logo" />
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="work work__third">
-        @@include("html/info.html", { time: "6", lens: "f/11", iso: "800", label: "Nepal" })
-
-        <div class="work__content">
-          <h2 class="work__title">Star fall in the Himalayas</h2>
-          <p class="work__description">
-            Nulla rhoncus feugiat eros quis consectetur. Morbi neque ex, condimentum dapibus congue et, vulputate ut
-            ligula.
-          </p>
-        </div>
-      </section>
-
-      <section class="help">
-        <div class="container section-container">
-          <h2 class="title help__title">Need help with photography or videography?</h2>
-          <p class="subtitle">We're here for you!</p>
-          <a href="#" class="button button--icon help__button">
-            <span>Get in touch</span>
-          </a>
-        </div>
-      </section>
-    </main>
+        </section>
+      </main>
+    </div>
 
     @@include("html/footer.html")
     <script src="@scripts/index.js"></script>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include("html/head.html", { "title": "Aperture | Home" })
+  <body>
+    @@include("html/header.html")
+
+    <div id="cursor"></div>
+    <div id="aura"></div>
+
+    <div data-barba="wrapper">
+      <main data-barba="container" data-barba-namespace="video">
+        <div class="circle">Loading...</div>
+      </main>
+    </div>
+
+    <script src="@scripts/index.js"></script>
+  </body>
+</html>

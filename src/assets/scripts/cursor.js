@@ -13,7 +13,7 @@ function mouseMove(e) {
   cursorX = e.clientX;
   cursorY = e.clientY;
 
-  if (e.target.closest('a')) {
+  if (e.target.closest('a') || e.target.closest('input') || e.target.closest('button')) {
     $cursor.classList.add('hidden');
     $aura.classList.add('expand');
   } else {
