@@ -55,7 +55,7 @@ body {
   }
 }
 
-.circle {
+.loader {
   position: fixed;
   top: var(--header-height);
   bottom: 0;
@@ -67,15 +67,15 @@ body {
   width: 0;
   height: calc(100% - var(--header-height));
   background-color: var(--light-black);
-  font-size: 0;
-  clip-path: polygon(0 0, 50% 0, 100% 100%, 0 100%);
-}
 
-.container {
-  max-width: 1260px;
-  margin: 0 auto;
-  padding-right: 30px;
-  padding-left: 30px;
+  &__text {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    font-size: 25px;
+    transform: translate(-50%, 50%);
+  }
 }
 
 .section-container {

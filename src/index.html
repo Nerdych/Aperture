@@ -9,7 +9,9 @@
 
     <div data-barba="wrapper">
       <main data-barba="container" data-barba-namespace="home">
-        <div class="circle">Loading...</div>
+        <div class="loader">
+          <span class="loader__text"></span>
+        </div>
 
         <section class="intro">
           @@include("html/info.html", { time: "1/2000s", lens: "f/11", iso: "100", label: "Iceland" })

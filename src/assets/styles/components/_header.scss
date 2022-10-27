@@ -23,21 +23,18 @@
 
   .camera-image {
     transform: translateY(-150%) scale(0);
+    animation-name: camera-image-animation;
+    animation-duration: 12s;
+    animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    animation-delay: 0.4s;
+    animation-iteration-count: infinite;
   }
 
-  &:hover {
-    .logo-image {
-      animation-name: logo-image-animation;
-      animation-duration: 4s;
-      animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
-    }
-
-    .camera-image {
-      animation-name: camera-image-animation;
-      animation-duration: 4s;
-      animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
-      animation-delay: 0.4s;
-    }
+  .logo-image {
+    animation-name: logo-image-animation;
+    animation-duration: 12s;
+    animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    animation-iteration-count: infinite;
   }
 }
 
@@ -144,12 +141,12 @@
     transform: translateX(0);
   }
 
-  15%,
-  90% {
-    transform: translateX(-25px);
+  5%,
+  40% {
+    transform: translateX(-15px);
   }
 
-  100% {
+  45% {
     transform: translateX(0);
   }
 }
@@ -159,26 +156,26 @@
     transform: translateY(-150%) scale(0);
   }
 
-  10% {
+  5% {
     transform: translateY(-2px) scale(1);
   }
 
-  20% {
+  10% {
     transform: translateY(-2px) scale(1) rotate(45deg);
   }
 
-  35% {
+  15% {
     transform: translateY(-2px) scale(1) rotate(-45deg);
   }
 
-  50% {
+  20% {
     background: none;
     filter: none;
     transform: translateY(-2px) scale(1);
   }
 
-  65%,
-  70% {
+  25%,
+  30% {
     background:
       radial-gradient(
         closest-side circle at center, hsl(4 5% 100% / 1) 0%, hsl(4 5% 100% / 1) 15%, hsl(4 10% 70% / 0.7) 30%, hsl(4 0% 50% / 0.3) 55%, hsl(4 0% 10% / 0.05) 75%, transparent 99
@@ -187,17 +184,17 @@
     transform: translateY(-2px) scale(1);
   }
 
-  80% {
+  35% {
     background: none;
     filter: none;
     transform: translateY(-2px) scale(1) rotate(0);
   }
 
-  90% {
+  40% {
     transform: translateY(-200%) scale(0) rotate(360deg);
   }
 
-  100% {
+  45% {
     transform: translateY(-200%) scale(0) rotate(360deg);
   }
 }
