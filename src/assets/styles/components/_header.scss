@@ -54,16 +54,16 @@
     background-color: var(--white);
     transition: transform 0.2s;
 
-    &:nth-child(1) {
+    &:nth-of-type(1) {
       top: 3px;
     }
 
-    &:nth-child(2) {
+    &:nth-of-type(2) {
       top: 50%;
       transform: translateY(-50%);
     }
 
-    &:nth-child(3) {
+    &:nth-of-type(3) {
       bottom: 4px;
     }
   }
@@ -107,7 +107,7 @@
       height: 100vh;
       background-color: var(--light-black);
       animation-name: menu-active;
-      animation-duration: 0.8s;
+      animation-duration: 0.6s;
       animation-fill-mode: forwards;
     }
   }
