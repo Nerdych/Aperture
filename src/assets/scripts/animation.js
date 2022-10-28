@@ -78,10 +78,10 @@ async function pageAnimateOut(container, text) {
       'end'
     )
     .to($loader, { duration: 0, left: 0, right: '100%' });
-  // .to($loaderText, { duration: 0, transform: 'translate(-50%, 50px)' });
 }
 
 barba.init({
+  preventRunning: true,
   transitions: [
     {
       name: 'opacity-transition',
@@ -96,4 +96,8 @@ barba.init({
       },
     },
   ],
+});
+
+barba.hooks.leave(() => {
+  window.scrollTo(0, 0);
 });
